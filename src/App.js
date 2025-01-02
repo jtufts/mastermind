@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 export default function App() {
@@ -31,7 +30,7 @@ export default function App() {
      for(let i = 1; i <= maxDigit; i++){
       let exactDigits = 0;
       for(let j = 0; j < codeLength; j++){
-        if(correctCode.charAt(j) == i && guess.charAt(j) == i ){
+        if(parseInt(correctCode.charAt(j)) === i && parseInt(guess.charAt(j)) === i ){
           exactDigits++;
         }
       }
